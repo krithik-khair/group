@@ -278,16 +278,20 @@
         }
 
         .profile-img-container::before {
-            content: '';
-            position: absolute;
-            width: 340px;
-            height: 340px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple), var(--accent-teal));
-            filter: blur(35px);
-            opacity: 0.3;
-            z-index: 1;
-            animation: pulse 6s infinite alternate;
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple), var(--accent-teal));
+    filter: blur(35px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: pulse 6s infinite alternate;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
         }
 
         @keyframes pulse {
