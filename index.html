@@ -259,9 +259,11 @@
         }
 
         .profile-img-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;   /* THIS FIXES THE CUT GLOW */
         }
 
         .profile-img {
@@ -492,11 +494,13 @@
         }
 
         .info-logo {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin-right: var(--spacing-md);
-            filter: brightness(0) invert(1);
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-right: var(--spacing-md);
+
+    filter: none;
+    background: transparent;
         }
 
         .info-title {
