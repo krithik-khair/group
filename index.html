@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KHAIR GROUP</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff;
+  --off:#f7f9f9;
+  --light:#eef4f4;
+  --border:#dde8e8;
+  --border-dark:#b8d0d0;
+  --teal-deep:#0a6b6b;
+  --teal:#0d9488;
+  --teal-mid:#0ea5a0;
+  --teal-light:#2dd4bf;
+  --navy:#0a1628;
+  --navy-2:#0f2040;
+  --text:#0a1628;
+  --text-2:#2a4a5a;
+  --muted:#6b8a8a;
+  --muted-light:#9ab5b5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 72px;background:rgba(255,255,255,0.95);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.nl{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nlm{width:38px;height:38px;background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));clip-path:polygon(20% 0%,80% 0%,100% 20%,100% 80%,80% 100%,20% 100%,0% 80%,0% 20%);display:flex;align-items:center;justify-content:center;font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;color:white;flex-shrink:0}
+.nlt{font-family:'Chakra Petch',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--text)}
+.nlt span{background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nlinks{display:flex;gap:40px;list-style:none}
+.nlinks a{font-size:12px;letter-spacing:0.08em;color:var(--muted);text-decoration:none;transition:color 0.2s;font-weight:500}
+.nlinks a:hover{color:var(--teal-deep)}
+.ncta{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:white;background:linear-gradient(135deg,var(--teal-deep),var(--teal));padding:10px 22px;text-decoration:none;transition:all 0.2s;font-weight:600}
+.ncta:hover{background:linear-gradient(135deg,var(--teal),var(--teal-light))}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:72px;position:relative;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 72px;border-right:1px solid var(--border);position:relative;z-index:1}
+.hero-right{display:flex;align-items:center;justify-content:center;background:var(--off);padding:80px 60px;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,148,136,0.04) 0%,rgba(45,212,191,0.06) 100%)}
+
+/* Hero right — large KG mark */
+.kg-mark-large{width:280px;height:280px;background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));clip-path:polygon(20% 0%,80% 0%,100% 20%,100% 80%,80% 100%,20% 100%,0% 80%,0% 20%);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:0 40px 80px rgba(13,148,136,0.2)}
+.kg-mark-large span{font-family:'Chakra Petch',sans-serif;font-size:96px;font-weight:700;color:white;letter-spacing:-0.05em;opacity:0.9}
+.hero-right-label{position:absolute;bottom:40px;left:40px;right:40px;text-align:center;z-index:1}
+.hero-right-label p{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+.htag{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal);margin-bottom:28px;display:flex;align-items:center;gap:12px;animation:fadeUp 0.7s ease both}
+.htag::before{content:'';width:28px;height:1px;background:var(--teal)}
+h1{font-family:'Chakra Petch',sans-serif;font-size:clamp(40px,5.5vw,72px);font-weight:700;line-height:1;letter-spacing:-0.02em;color:var(--text);margin-bottom:24px;animation:fadeUp 0.8s ease both 0.1s}
+h1 .tg{background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsub{font-size:16px;color:var(--muted);line-height:1.75;max-width:460px;margin-bottom:44px;font-weight:300;animation:fadeUp 0.9s ease both 0.2s}
+.hsub strong{color:var(--text-2);font-weight:500}
+.hact{display:flex;gap:14px;animation:fadeUp 0.9s ease both 0.3s}
+.bp{font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:white;padding:14px 30px;text-decoration:none;transition:all 0.3s}
+.bp:hover{background:linear-gradient(135deg,var(--teal),var(--teal-light));transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,148,136,0.25)}
+.bg{font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-deep);padding:14px 30px;text-decoration:none;border:1.5px solid var(--teal-deep);transition:all 0.3s}
+.bg:hover{background:var(--teal-deep);color:white}
+.hstats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border-top:1px solid var(--border);padding-top:40px;animation:fadeUp 1s ease both 0.4s}
+.stat{text-align:center;padding:0 20px;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat:first-child{padding-left:0;text-align:left}
+.sn{font-family:'Chakra Petch',sans-serif;font-size:32px;font-weight:700;line-height:1;margin-bottom:6px;background:linear-gradient(135deg,var(--teal-deep),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* ── ANIMATED MARQUEE (VENTURE LINE) ── */
+.band{
+  background:linear-gradient(135deg,var(--teal-deep),var(--navy-2));
+  padding:20px 0;
+  overflow:hidden;
+  white-space:nowrap;
+  position:relative;
+}
+.marquee-track{
+  display:inline-flex;
+  gap:0;
+  animation: scrollMarquee 22s linear infinite;
+}
+.band-item{
+  font-family:'Chakra Petch',sans-serif;
+  font-size:10px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+  padding:0 40px;
+  border-right:1px solid rgba(255,255,255,0.1);
+  flex-shrink:0;
+}
+.band-item span{
+  color:rgba(45,212,191,0.7);
+  margin-right:16px;
+}
+@keyframes scrollMarquee{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+/* pause on hover */
+.band:hover .marquee-track{
+  animation-play-state:paused;
+}
+
+/* ── SECTIONS ── */
+.sec{padding:96px 72px;position:relative}
+.sec.alt{background:var(--off)}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.slabel{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;font-weight:600}
+.stitle{font-family:'Chakra Petch',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:700;color:var(--text);line-height:1.1}
+.stitle .dim{color:var(--muted-light)}
+.slink{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;font-family:'Chakra Petch',sans-serif;font-weight:600;transition:all 0.2s}
+.slink:hover{color:var(--teal-deep);border-color:var(--teal-deep)}
+
+/* Ventures */
+.vg{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border)}
+.vc{padding:40px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;transition:all 0.3s;background:white;overflow:hidden}
+.vc:nth-child(3n){border-right:none}
+.vc:nth-child(4),.vc:nth-child(5),.vc:nth-child(6){border-bottom:none}
+.vc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-deep),var(--teal-light));transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease}
+.vc:hover{background:var(--off);box-shadow:inset 0 0 0 0 transparent}
+.vc:hover::before{transform:scaleX(1)}
+.vnum{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.2em;color:var(--muted-light);margin-bottom:20px;font-weight:600}
+.vicon{width:44px;height:44px;background:linear-gradient(135deg,rgba(10,107,107,0.08),rgba(45,212,191,0.12));border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:18px;clip-path:polygon(15% 0%,85% 0%,100% 15%,100% 85%,85% 100%,15% 100%,0% 85%,0% 15%)}
+.vname{font-family:'Chakra Petch',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:0.03em}
+.vtype{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:600}
+.vdesc{font-size:13px;color:var(--muted);line-height:1.75;font-weight:400}
+.vcnt{position:absolute;bottom:20px;right:24px;font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.15em;color:var(--border-dark);font-weight:600}
+
+/* Founder */
+.fc{display:grid;grid-template-columns:360px 1fr;border:1px solid var(--border)}
+.fl{padding:56px;background:linear-gradient(160deg,var(--teal-deep) 0%,var(--navy-2) 100%);display:flex;flex-direction:column;justify-content:space-between}
+.fpb{width:88px;height:88px;background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.3);clip-path:polygon(15% 0%,85% 0%,100% 15%,100% 85%,85% 100%,15% 100%,0% 85%,0% 15%);display:flex;align-items:center;justify-content:center;margin-bottom:28px}
+.fi{font-family:'Chakra Petch',sans-serif;font-size:28px;font-weight:700;color:white}
+.fn{font-family:'Chakra Petch',sans-serif;font-size:22px;font-weight:700;color:white;margin-bottom:6px;letter-spacing:0.05em}
+.ft{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(45,212,191,0.8);margin-bottom:28px;font-weight:500}
+.ftags{display:flex;flex-wrap:wrap;gap:8px}
+.ftag{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:5px 10px;font-weight:500}
+.fr{padding:56px;background:white}
+.fbio{font-size:15px;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:40px}
+.fbio strong{color:var(--text);font-weight:600}
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border)}
+.ti{padding:18px 22px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:14px;transition:background 0.2s}
+.ti:hover{background:var(--off)}
+.ti:nth-child(2n){border-right:none}
+.ti:nth-child(5),.ti:nth-child(6){border-bottom:none}
+.ty{font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:700;color:var(--teal-deep);min-width:40px;padding-top:2px}
+.te{font-size:12px;color:var(--muted);line-height:1.5;font-weight:400}
+.te strong{color:var(--text);font-weight:600}
+
+/* Products */
+.pl{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border)}
+.pi{padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background 0.2s;position:relative}
+.pi:nth-child(5n){border-right:none}
+.pi:nth-child(6),.pi:nth-child(7),.pi:nth-child(8),.pi:nth-child(9),.pi:nth-child(10){border-bottom:none}
+.pi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal-deep),var(--teal-light));transform:scaleX(0);transition:transform 0.3s}
+.pi:hover{background:var(--off)}.pi:hover::after{transform:scaleX(1)}
+.pcat{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;font-weight:600}
+.pname{font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:5px}
+.pdesc{font-size:11px;color:var(--muted);line-height:1.5;font-weight:400}
+
+/* Contact */
+.cc{border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr}
+.cl{padding:72px;background:linear-gradient(160deg,var(--teal-deep) 0%,var(--navy-2) 100%);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.cl::before{content:'KG';font-family:'Chakra Petch',sans-serif;font-size:200px;font-weight:700;color:rgba(255,255,255,0.04);position:absolute;bottom:-40px;left:-20px;line-height:1;pointer-events:none}
+.clabel{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(45,212,191,0.7);margin-bottom:16px;position:relative;z-index:1}
+.ctitle{font-family:'Chakra Petch',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:white;line-height:1.05;position:relative;z-index:1}
+.csub{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;font-weight:300;margin-top:20px;max-width:320px;position:relative;z-index:1}
+.cr{padding:72px;background:white;display:flex;flex-direction:column;justify-content:center}
+.cemail-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-family:'Chakra Petch',sans-serif;font-weight:600}
+.cemail{font-family:'Chakra Petch',sans-serif;font-size:clamp(14px,2vw,20px);font-weight:700;background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;display:block;margin-bottom:40px}
+.slinks{display:flex;gap:10px;flex-wrap:wrap}
+.slink{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1.5px solid var(--border);padding:10px 18px;transition:all 0.2s;font-weight:600}
+.slink:hover{color:white;background:var(--teal-deep);border-color:var(--teal-deep)}
+.reg-note{margin-top:40px;padding-top:24px;border-top:1px solid var(--border)}
+.reg-note p{font-size:11px;color:var(--muted-light);line-height:1.6}
+.reg-note strong{color:var(--muted);font-weight:600}
+
+/* Footer */
+footer{border-top:2px solid var(--border);padding:32px 72px;display:flex;align-items:center;justify-content:space-between;background:white}
+.flogo{font-family:'Chakra Petch',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.2em;color:var(--text);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.flogo-mark{width:26px;height:26px;background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));clip-path:polygon(20% 0%,80% 0%,100% 20%,100% 80%,80% 100%,20% 100%,0% 80%,0% 20%);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:white}
+.flogo span{background:linear-gradient(135deg,var(--teal-deep),var(--teal-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fcopy{font-size:11px;color:var(--muted-light);letter-spacing:0.05em}
+.floc{font-size:11px;color:var(--muted-light);letter-spacing:0.05em}
+
+/* Reveal */
+.rev{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:1024px){nav{padding:0 32px}.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:60px 32px}.sec{padding:64px 32px}.sec.alt{padding:64px 32px}.band{padding:20px 0}.vg{grid-template-columns:1fr 1fr}.fc{grid-template-columns:1fr}.fl{border-bottom:1px solid rgba(255,255,255,0.1)}.pl{grid-template-columns:repeat(2,1fr)}.cc{grid-template-columns:1fr}.cl{padding:48px 32px}.cr{padding:48px 32px}footer{padding:24px 32px;flex-direction:column;gap:10px;text-align:center}.hstats{grid-template-columns:1fr 1fr;gap:24px}.stat{border:none;text-align:left;padding:0}.tl{grid-template-columns:1fr}}
+@media(max-width:600px){.vg{grid-template-columns:1fr}.pl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nl">
+    <div class="nlm">KG</div>
+    <span class="nlt">KHAIR <span>GROUP</span></span>
+  </a>
+  <ul class="nlinks">
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#ecosystem">Ecosystem</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:business.khair108@gmail.com" class="ncta">Get In Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="htag">Est. 2025 · Jammu, J&K · India</div>
+    <h1>BUILDING<br><span class="tg">TOMORROW'S</span><br>ENTERPRISES</h1>
+    <p class="hsub">An interconnected ecosystem of specialized ventures at the intersection of <strong>technology, research, publishing, and creative innovation.</strong> Built by one mind. Zero external funding.</p>
+    <div class="hact">
+      <a href="#ventures" class="bp">Our Ventures</a>
+      <a href="#founder" class="bg">Meet the Founder</a>
+    </div>
+    <div class="hstats">
+      <div class="stat"><div class="sn">6</div><div class="sl">Active Ventures</div></div>
+      <div class="stat"><div class="sn">20+</div><div class="sl">Live Products</div></div>
+      <div class="stat"><div class="sn">7</div><div class="sl">Countries</div></div>
+      <div class="stat"><div class="sn">₹0</div><div class="sl">External Funding</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="kg-mark-large"><span>KG</span></div>
+    <div class="hero-right-label"><p>Khair Group · Jammu &amp; Kashmir · India · UDYAM-JK-07-0087998</p></div>
+  </div>
+</section>
+
+<!-- ANIMATED VENTURE LINE (MARQUEE) -->
+<div class="band">
+  <div class="marquee-track">
+    <div class="band-item"><span>✦</span>Krixon Digital</div>
+    <div class="band-item"><span>✦</span>Khair A&amp;G</div>
+    <div class="band-item"><span>✦</span>Khair Research</div>
+    <div class="band-item"><span>✦</span>Kritvya Doctrine</div>
+    <div class="band-item"><span>✦</span>Khair Publications</div>
+    <div class="band-item"><span>✦</span>KP Productions</div>
+    <div class="band-item"><span>✦</span>MSME Registered</div>
+    <div class="band-item"><span>✦</span>7 Countries</div>
+    <!-- duplicate for seamless loop -->
+    <div class="band-item"><span>✦</span>Krixon Digital</div>
+    <div class="band-item"><span>✦</span>Khair A&amp;G</div>
+    <div class="band-item"><span>✦</span>Khair Research</div>
+    <div class="band-item"><span>✦</span>Kritvya Doctrine</div>
+    <div class="band-item"><span>✦</span>Khair Publications</div>
+    <div class="band-item"><span>✦</span>KP Productions</div>
+    <div class="band-item"><span>✦</span>MSME Registered</div>
+    <div class="band-item"><span>✦</span>7 Countries</div>
+  </div>
+</div>
+
+<!-- VENTURES -->
+<section class="sec rev" id="ventures">
+  <div class="sh">
+    <div><div class="slabel">Portfolio</div><div class="stitle">Our <span class="dim">Ventures</span></div></div>
+    <a href="#contact" class="slink">Partner With Us</a>
+  </div>
+  <div class="vg">
+    <div class="vc"><div class="vnum">01</div><div class="vicon">⬡</div><div class="vname">Krixon Digital</div><div class="vtype">Web Solutions</div><div class="vdesc">Cutting-edge web development, digital platforms, and scalable applications. ResumePRO, GraphMint, and enterprise-grade tools built for real-world impact.</div><div class="vcnt">5 Projects</div></div>
+    <div class="vc"><div class="vnum">02</div><div class="vicon">◈</div><div class="vname">Khair A&amp;G</div><div class="vtype">Apps &amp; Games</div><div class="vdesc">Educational mobile applications and engaging games combining structured learning with interactive experience. Live on App Store and Google Play.</div><div class="vcnt">5 Products</div></div>
+    <div class="vc"><div class="vnum">03</div><div class="vicon">◎</div><div class="vname">Khair Research</div><div class="vtype">Academic Research</div><div class="vdesc">Peer-reviewed academic contributions on SSRN and ORCID at the intersection of technology, society, and emerging systems.</div><div class="vcnt">1 Publication</div></div>
+    <div class="vc"><div class="vnum">04</div><div class="vicon">◇</div><div class="vname">Kritvya Doctrine</div><div class="vtype">Philosophy</div><div class="vdesc">An original philosophical framework guiding ethical decision-making, personal mastery, and the intellectual foundation of the Khair Group ecosystem.</div><div class="vcnt">9 Works</div></div>
+    <div class="vc"><div class="vnum">05</div><div class="vicon">▣</div><div class="vname">Khair Publications</div><div class="vtype">Publishing · MSME Registered</div><div class="vdesc">Professional book publishing in Kashmir Shaivism, philosophy, and modern thought. Titles distributed in 7 countries via KDP, Draft2Digital, and Inkoria.in.</div><div class="vcnt">6 Titles Live</div></div>
+    <div class="vc"><div class="vnum">06</div><div class="vicon">♬</div><div class="vname">KP Productions</div><div class="vtype">Music Production</div><div class="vdesc">Original compositions and audio experiences distributed globally through TuneCore. Live on YouTube Music and major streaming platforms.</div><div class="vcnt">3 Productions</div></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec alt rev" id="founder" style="padding-top:0;padding-bottom:96px">
+  <div style="padding-top:96px">
+  <div class="sh">
+    <div><div class="slabel">Leadership</div><div class="stitle">The <span class="dim">Founder</span></div></div>
+  </div>
+  <div class="fc">
+    <div class="fl">
+      <div>
+        <div class="fpb"><span class="fi">KK</span></div>
+        <div class="fn">Krithik Khair</div>
+        <div class="ft">Founder &amp; Chief Architect</div>
+      </div>
+      <div class="ftags">
+        <span class="ftag">Developer</span><span class="ftag">Publisher</span><span class="ftag">Researcher</span><span class="ftag">Designer</span><span class="ftag">Philosopher</span><span class="ftag">Producer</span><span class="ftag">UCEED 2027</span><span class="ftag">Age 18</span>
+      </div>
+    </div>
+    <div class="fr">
+      <div class="fbio">A <strong>Kashmiri Pandit</strong> from Jagti, Jammu — building an interconnected digital empire entirely from the ground up with zero external capital. At 18, Krithik architects 6 active ventures spanning web development, publishing, academic research, philosophy, apps, and music. His books reach <strong>7 countries</strong> across 3 continents. Khair Publications holds an official <strong>Government of India MSME registration</strong> and his research is published on <strong>SSRN with an ORCID identity.</strong></div>
+      <div class="tl">
+        <div class="ti"><div class="ty">12</div><div class="te"><strong>Teaching maths on YouTube</strong> — Grade 7 curriculum</div></div>
+        <div class="ti"><div class="ty">13</div><div class="te"><strong>Competitive Esports</strong> — Free Fire circuit</div></div>
+        <div class="ti"><div class="ty">14</div><div class="te"><strong>Web &amp; app development</strong> — Live on App Store</div></div>
+        <div class="ti"><div class="ty">15</div><div class="te"><strong>Public speaking &amp; debate</strong> — Akhnoor Military Camp</div></div>
+        <div class="ti"><div class="ty">16</div><div class="te"><strong>Music production</strong> — Distributed on YouTube Music</div></div>
+        <div class="ti"><div class="ty">17–18</div><div class="te"><strong>6 books, SSRN paper, 5 apps, MSME registration</strong></div></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="sec rev" id="ecosystem">
+  <div class="sh">
+    <div><div class="slabel">Products</div><div class="stitle">Live <span class="dim">Ecosystem</span></div></div>
+  </div>
+  <div class="pl">
+    <div class="pi"><div class="pcat">Web App</div><div class="pname">ResumePRO</div><div class="pdesc">Professional resume builder</div></div>
+    <div class="pi"><div class="pcat">Data</div><div class="pname">GraphMint</div><div class="pdesc">Data visualization platform</div></div>
+    <div class="pi"><div class="pcat">Wellness</div><div class="pname">SoulLines</div><div class="pdesc">Spiritual wellness application</div></div>
+    <div class="pi"><div class="pcat">AI</div><div class="pname">Tej AI</div><div class="pdesc">Intelligent AI assistant</div></div>
+    <div class="pi"><div class="pcat">Research AI</div><div class="pname">Angiras AI</div><div class="pdesc">Advanced research tool</div></div>
+    <div class="pi"><div class="pcat">Publishing</div><div class="pname">Kashmiri Shaivism</div><div class="pdesc">Bestselling — 7 countries</div></div>
+    <div class="pi"><div class="pcat">Publishing</div><div class="pname">Spanda</div><div class="pdesc">Trika Foundations Vol. 2</div></div>
+    <div class="pi"><div class="pcat">Publishing</div><div class="pname">Elite's Playbook</div><div class="pdesc">Mass psychology series</div></div>
+    <div class="pi"><div class="pcat">Platform</div><div class="pname">Inkoria.in</div><div class="pdesc">Publisher storefront</div></div>
+    <div class="pi"><div class="pcat">Research</div><div class="pname">SSRN Paper</div><div class="pdesc">Peer-reviewed, live</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec alt rev" id="contact" style="padding-top:0;padding-bottom:96px">
+  <div style="padding-top:96px">
+  <div class="sh">
+    <div><div class="slabel">Collaborate</div><div class="stitle">Get In <span class="dim">Touch</span></div></div>
+  </div>
+  <div class="cc">
+    <div class="cl">
+      <div>
+        <div class="clabel">Open for collaboration</div>
+        <div class="ctitle">Let's Build<br>Something<br>Extraordinary.</div>
+        <div class="csub">Publishing, development, research, philosophy, or a new venture entirely — Khair Group is always open to meaningful collaboration.</div>
+      </div>
+    </div>
+    <div class="cr">
+      <div class="cemail-label">Direct Email</div>
+      <a href="mailto:business.khair108@gmail.com" class="cemail">business.khair108@gmail.com</a>
+      <div class="slinks">
+        <a href="https://github.com/krithik-khair" class="slink" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/krithik-khair-026383388" class="slink" target="_blank">LinkedIn</a>
+        <a href="https://inkoria.in" class="slink" target="_blank">Inkoria</a>
+        <a href="https://krithik-khair.github.io/uni" class="slink" target="_blank">Portfolio</a>
+        <a href="https://www.youtube.com/@KrithikKhair" class="slink" target="_blank">YouTube</a>
+      </div>
+      <div class="reg-note">
+        <p><strong>UDYAM-JK-07-0087998</strong> · Ministry of MSME, Government of India<br>Registered Publisher · Jammu &amp; Kashmir · PIN 181221</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo"><div class="flogo-mark">KG</div>KHAIR <span>GROUP</span></div>
+  <div class="fcopy">© 2026 Krithik Khair. All rights reserved.</div>
+  <div class="floc">Jagti Township, Jammu &amp; Kashmir, India</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:0.08});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+document.querySelectorAll('.vc,.pi,.ti').forEach((el,i)=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition=`opacity 0.5s ease ${i*0.04}s,transform 0.5s ease ${i*0.04}s,background 0.3s`;const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:0.1});o.observe(el)});
+</script>
+</body>
+</html>
